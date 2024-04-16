@@ -54,7 +54,7 @@ class GenderParser:
                 OSError
                 raise Exception(f"{model_name} is not a recognized spaCy model.")
 
-        nlp_coref = spacy.load("en_coreference_web_trf")
+        nlp_coref = spacy.load("en_core_web_trf")
 
         # use replace_listeners for the coref components
         nlp_coref.replace_listeners("transformer", "coref", ["model.tok2vec"])
